@@ -1,7 +1,10 @@
 @use 'core/reset';
+@use 'core/variables';
 @use 'components/code';
 @use 'components/links';
-@use 'layout/page';
+@use 'layout/design';
+@use 'layout/fill';
+@use 'layout/share';
 @use 'layout/header';
 @use 'layout/footer';
 @use 'pages/index';
