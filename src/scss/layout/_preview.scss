@@ -1,0 +1,85 @@
+@use '../core/variables' as vars;
+
+.preview-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: vars.$fontMain;
+}
+
+.card-container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 2rem;
+  width: 350px;
+  text-align: center;
+}
+
+.reset-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #b3002d;
+}
+
+.character-photo {
+  width: 100%;
+  height: 200px;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.character-name {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.character-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.character-details .column {
+  width: 48%;
+}
+
+.character-details p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.share-url {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.share-url a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.share-url a:hover {
+  text-decoration: underline;
+}
