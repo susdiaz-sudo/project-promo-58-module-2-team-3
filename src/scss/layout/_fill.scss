@@ -1,3 +1,4 @@
+
 .uncial-antiqua-regular {
   font-family: "Uncial Antiqua", system-ui;
   font-weight: 400;
@@ -12,4 +13,17 @@
 
 .fill_form {
     font-family: "Eagle Lake", serif;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
 }
+
+.fill_form_title {
+  font-family: "Uncial Antiqua", system-ui;
+  display: flex;
+  border-bottom: solid black 1.5px;
+  place-content: space-around;
+  padding: 1em 2em;
+}
+
