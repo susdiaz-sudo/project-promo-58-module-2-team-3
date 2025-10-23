@@ -1,9 +1,79 @@
 @use '../core/variables' as vars;
 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .design {
-    padding: 2rem;
-    height: 100vh;
-    background-image: url('/images/bg-adalab.png');
+    padding: 0;
     background-color: vars.$colorBg;
     font-family: vars.$fontMain;
+}
+
+/*-- ---- ---- ---- ----  panel desing & button ---- ---- ---- ---- --*/
+.panel-design {
+    display: flex;
+    align-items: center;
+    padding: 0.1rem;
+}
+
+.pallette {
+    width: 8%;
+}
+
+.title-desing {
+    font-family: "Uncial Antiqua", system-ui;
+    /* Espacio central diseña&flecha */
+    margin-right: 10rem;
+}
+
+/*-- ---- ---- ---- ---- ---- button ---- ---- ---- ---- ---- --*/
+.aroow-design {
+    /* quita aspecto de botón */
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.arrow {
+    width: 40%;
+}
+
+/*-- ---- ---- ---- ----  FIN  panel desing & button ---- ---- ---- ---- --*/
+.open-panel {
+    font-family: "Eagle Lake", serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.background-option {
+    margin-left: 18rem;
+
+}
+
+.background-img {
+    margin-bottom: 1.5rem;
+}
+
+/*
+.background-option {
+    margin-left: 10rem;
+
+.background-images {
+    margin-left: 1rem;
+}
+
+.background-img {
+    margin-right: 1rem;
+}
+    */
+
+@media (min-width: 1024px) {
+    .pallette {
+        width: 2%;
+
+    }
 }

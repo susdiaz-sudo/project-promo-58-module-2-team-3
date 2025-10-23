@@ -1,21 +1,33 @@
-Cris design
 <link rel="stylesheet" href="../scss/core/_variables.scss">
 
+
 <section class="design">
+  <!-- ---- ---- ---- panel desing & button ---- ---- ---- -->
   <div class="panel-design">
-    <button class="panel-title">DISEÑO
-      <img src="../images/icons/arrow.png" alt="Abrir y cerrar panel">
+    <img class="pallette" src="../images/icons/pallette.png">
+    <h3 class="title-desing">Diseña</h3>
+    <!-- ---- ---- ---- button ---- ---- ---- -->
+    <button class="aroow-design">
+      <img class="arrow" src="../images/icons/arrow.png" alt="Abrir y cerrar panel">
     </button>
   </div>
+  <!-- ---- ---- ---- FIN   panel desing & button ---- ---- ---- -->
   <div class="open-panel">
-    <label>
-      <input type="radio" name="background" value="papiro"> Papiro
+    <p>Fondos</p>
+    <label class="background-option">
+      <input type="radio" name="background" value="papiro">
+      <span>Papiro</span>
+      <img class="background-images" src="../images/background/miniature/papiro-miniature.png" alt="Fondo Papiro">
     </label>
-    <label>
-      <input type="radio" name="background" value="piedra"> Piedra
+    <label class="background-option">
+      <input type="radio" name="background" value="piedra">
+      <span>Piedra</span>
+      <img class="background-images" src="../images/background/miniature/piedra-miniature.png" alt="Fondo Piedra">
     </label>
-    <label>
-      <input type="radio" name="background" value="metal"> Metal
+    <label class="background-option">
+      <input type="radio" name="background" value="metal">
+      <span>Madera</span>
+      <img class="background-img" src="../images/background/miniature/madera-miniature.png" alt="Fondo Madera">
     </label>
   </div>
 </section>
