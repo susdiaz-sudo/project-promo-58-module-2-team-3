@@ -1,5 +1,16 @@
 .page__header {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+.header_create {
+  max-width: 100dvw;
+  border-bottom: solid black 1.5px;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+}
+
+.logo_header {
+  max-height: 5dvh;
 }

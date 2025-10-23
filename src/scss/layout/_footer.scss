@@ -8,3 +8,17 @@
     padding: 1rem;
     color: vars.$colorSecundary;
 }
+
+.footer {
+  max-width: 100dvw;
+  border-top: solid black 1.5px;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_adalab {
+    max-height: 4dvh;
+}
