@@ -15,11 +15,11 @@
 }
 
 .fill_form {
-    font-family: "Eagle Lake", serif;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    
+  font-family: "Eagle Lake", serif;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
 }
 
 .fill_form_title {
@@ -30,7 +30,8 @@
   border-bottom: solid black 1.5px;
 }
 
-.feather, .arrow {
+.feather,
+.arrow {
   width: 2rem;
 }
 
@@ -38,9 +39,12 @@
   padding-bottom: 1rem;
 }
 
-.input_name, .input_race,
-.input_gender, .input_class,
-.input_age, .input_afiliation,
+.input_name,
+.input_race,
+.input_gender,
+.input_class,
+.input_age,
+.input_afiliation,
 .input_image {
   color: rgb(127, 126, 126);
 }
@@ -48,4 +52,3 @@
 .square_preview {
   width: 6rem;
 }
-

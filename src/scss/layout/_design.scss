@@ -10,7 +10,8 @@
 .panel-design {
     display: flex;
     align-items: center;
-    padding: 0.1rem;
+    margin: 0rem 1rem;
+    border-bottom: solid black 1.5px;
 }
 
 .pallette {
@@ -19,8 +20,6 @@
 
 .title-desing {
     font-family: "Uncial Antiqua", system-ui;
-    /* Espacio central diseña&flecha */
-    margin-right: 10rem;
 }
 
 /*-- ---- ---- ---- ---- ---- button ---- ---- ---- ---- ---- --*/
@@ -38,16 +37,19 @@
 /*-- ---- ---- ---- ----  FIN  panel desing & button ---- ---- ---- ---- --*/
 .open-panel {
     font-family: "Eagle Lake", serif;
-    padding: 2rem;
+    margin: 1.5rem 1.5rem;
     display: flex;
-
     flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 1rem;
 }
 
+.background-option {
+    margin: 0.5rem 0.5rem 0rem 12rem;
 
-@media (min-width: 1024px) {
+}
+
+
+@media (min-width: 768px) {
     .pallette {
         width: 2%;
 
