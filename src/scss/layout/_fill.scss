@@ -1,3 +1,7 @@
+*:root {
+  background-color: #f5f5f5;
+  
+}
 
 .uncial-antiqua-regular {
   font-family: "Uncial Antiqua", system-ui;
@@ -16,14 +20,27 @@
     padding: 2em;
     display: grid;
     grid-template-columns: 100px 1fr;
-
+    
 }
 
 .fill_form_title {
   font-family: "Uncial Antiqua", system-ui;
   display: flex;
+  place-content: baseline;
+  margin: 0em 1em;
   border-bottom: solid black 1.5px;
-  place-content: space-around;
-  padding: 1em 2em;
 }
 
+.feather, .arrow {
+  width: 2em;
+}
+
+.content {
+  padding-bottom: 1em;
+}
+
+.input_name, .input_race,
+.input_gender, .input_class,
+.input_age, .input_afiliation {
+  color: rgb(127, 126, 126);
+}
