@@ -1,0 +1,69 @@
+@use '../core/variables' as vars;
+
+.share {
+  display: flex;
+  border-bottom: solid 0.1rem black;
+  height: 1.5rem;
+}
+
+.share_h3 {
+  font-family: vars.$fontTitle;
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+}
+
+.share_img {
+  width: 2em;
+  height: 2em;
+  margin-top: -0.5em;
+}
+
+.share_arrow {
+  width: 2em;
+  height: 2em;
+  margin-left: 4em;
+  margin-top: -0.6em;
+}
+
+.share_button_create {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 0.1em black;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.share_button {
+  font-family: vars.$fontMain;
+}
+
+.share_card {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.share_card_h3 {
+  font-family: vars.$fontTitle;
+  font-size: 1em;
+}
+
+.share_link a {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+
+.share_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.share_nav button {
+  font-family: vars.$fontMain;
+}
