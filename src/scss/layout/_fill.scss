@@ -16,7 +16,7 @@
 
 .fill_form {
     font-family: "Eagle Lake", serif;
-    padding: 2em;
+    padding: 2rem;
     display: grid;
     grid-template-columns: 100px 1fr;
     
@@ -26,20 +26,26 @@
   font-family: "Uncial Antiqua", system-ui;
   display: flex;
   place-content: baseline;
-  margin: 0em 1em;
+  margin: 0rem 1rem;
   border-bottom: solid black 1.5px;
 }
 
 .feather, .arrow {
-  width: 2em;
+  width: 2rem;
 }
 
 .content {
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 .input_name, .input_race,
 .input_gender, .input_class,
-.input_age, .input_afiliation {
+.input_age, .input_afiliation,
+.input_image {
   color: rgb(127, 126, 126);
 }
+
+.square_preview {
+  width: 6rem;
+}
+
