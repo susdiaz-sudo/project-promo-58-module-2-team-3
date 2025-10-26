@@ -83,6 +83,15 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.begin a {
+text-decoration: none;
+} 
+
+.begin a:visited,
+.begin a:hover {
+  color: black;
+}
+
 .begin:hover {
   transform: translate(0em, 0.75em)
 }
