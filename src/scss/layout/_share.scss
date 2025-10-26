@@ -4,11 +4,14 @@
   display: flex;
   border-bottom: solid 0.1rem black;
   height: 1.5rem;
+  margin-inline: 1rem;
+  padding-bottom: 2rem;
+
 }
 
 .share_h3 {
   font-family: vars.$fontTitle;
-  font-size: 1em;
+  font-size: 1.17em;
   width: 2em;
   height: 2em;
 }
@@ -26,11 +29,16 @@
   margin-top: -0.6em;
 }
 
+//.hidden {
+//display: none;
+//}
+
 .share_button_create {
   display: flex;
   justify-content: center;
   border-bottom: solid 0.1em black;
   padding: 0.5em;
+  margin-inline: 1rem;
   margin-bottom: 1em;
 }
 
@@ -55,9 +63,11 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
-
+  margin-bottom: 2em;
 }
 
 .share_nav button {
   font-family: vars.$fontMain;
 }
+
+@media (min-width: 768px) {}
