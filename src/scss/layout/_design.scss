@@ -6,9 +6,9 @@
   font-family: vars.$fontMain;
 }
 
-//.hidden {
-//  display: none;
-//}
+.hidden {
+  display: none;
+}
 
 /*-- ---- ---- ---- ----  panel desing & button ---- ---- ---- ---- --*/
 .panel-design {
@@ -54,8 +54,5 @@
 
 
 @media (min-width: 768px) {
-  .pallette {
-    width: 2%;
-
-  }
+  
 }

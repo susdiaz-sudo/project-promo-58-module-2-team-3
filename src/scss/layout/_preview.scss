@@ -10,15 +10,11 @@
   font-family: vars.$fontMain;
 }
 
-//.hidden {
-//  display: none;
-//}
-
 .card-container {
   position: relative;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 2rem;
   width: 350px;
   text-align: center;
