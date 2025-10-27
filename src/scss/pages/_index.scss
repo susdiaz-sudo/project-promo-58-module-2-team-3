@@ -1,4 +1,8 @@
 
+.html_index {
+  min-height: 100%;
+}
+
 .uncial-antiqua-regular {
   font-family: "Uncial Antiqua", system-ui;
   font-weight: 400;
@@ -27,19 +31,21 @@
 }
 
 .description {
-  border: solid black 1.5px;
+  border: solid #4B1F05 1.5px;
   border-radius: 20px;
   border-style: dashed;
   font-size: small;
   text-align: center;
   font-family: "Eagle Lake", serif;
   padding: 4em 2em 2em 2em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+  box-shadow: #4B1F05 0px 3px 8px;
+  max-width: 500px;
+  justify-self: center;
 }
 
 .ada-roll-logo {
-  max-width: 50dvw;
+  max-width: 40dvw;
+  min-width: 200px;
 
 }
 
@@ -49,7 +55,7 @@
 
 
 .guide {
-  border: solid black 1.5px;
+  border: solid #4B1F05 1.5px;
   border-radius: 20px;
   border-style: dashed;
   justify-self: center;
@@ -58,7 +64,7 @@
   display: grid;
   grid-auto-flow: column;
   font-family: "Eagle Lake", serif;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: #4B1F05 0px 3px 8px;
   
 }
 
@@ -76,11 +82,11 @@
   justify-self: center;
   margin: 2em;
   padding: 1em;
-  border: solid black 1.5px;
+  border: solid #4B1F05 1.5px;
   border-radius: 20px;
   border-style: dashed;
   font-family: "Uncial Antiqua", system-ui;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: #4B1F05 0px 3px 8px;
 }
 
 .begin a {
@@ -89,9 +95,23 @@ text-decoration: none;
 
 .begin a:visited,
 .begin a:hover {
-  color: black;
+  color: #4B1F05;
 }
 
 .begin:hover {
   transform: translate(0em, 0.75em)
+}
+
+@media (width > 750px) {
+
+  .description {
+    max-width: 500px;
+    justify-self: center;
+  }
+
+  .ada-roll-logo {
+  max-width: 300px;
+
+}
+
 }
