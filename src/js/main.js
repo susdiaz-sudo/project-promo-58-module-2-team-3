@@ -14,7 +14,17 @@ console.log('>> Ready :)');
 
 // QUERY-SELECTOR
 
-       // QUERY FILL
+//--Hidden--
+const titleDesign = document.querySelector('.js_titleDesign');
+const designSection = document.querySelector('.js_designSection');
+
+const titleFill = document.querySelector('.js_titleFill');
+const fillSection = document.querySelector('.js_fillSection');
+
+const titleShare = document.querySelector('.js_titleShare');
+const shareSection = document.querySelector('.js_shareSection');
+
+// QUERY FILL
 const inputName = document.querySelector('.js_input_name');
 const inputRace = document.querySelector('.js_input_race');
 const inputGender = document.querySelector('.js_input_gender');
@@ -23,7 +33,7 @@ const inputClass = document.querySelector('.js_input_class');
 const inputAge = document.querySelector('.js_input_age');
 const inputAffiliation = document.querySelector('.js_input_affiliation');
 
-       // QUERY PREVIEW
+// QUERY PREVIEW
 const namePreview = document.querySelector('.js_name_preview');
 const imagePreview = document.querySelector('.js_image_preview');
 const racePreview = document.querySelector('.js_race_preview');
@@ -47,6 +57,27 @@ inputAge.addEventListener('input', (ev) => {
 })
 
 // EVENTOS
+
+//--Hidden--
+titleDesign.addEventListener('click', (ev) => {
+    //designSection.classList.toggle('hidden');
+    fillSection.classList.add('hidden');
+    shareSection.classList.add('hidden');
+    designSection.classList.remove('hidden');
+});
+titleFill.addEventListener('click', (ev) => {
+    //fillSection.classList.toggle('hidden');
+    designSection.classList.add('hidden');
+    shareSection.classList.add('hidden');
+    fillSection.classList.remove('hidden');
+});
+titleShare.addEventListener('click', (ev) => {
+    //shareSection.classList.toggle('hidden');
+    designSection.classList.add('hidden');
+    fillSection.classList.add('hidden');
+    shareSection.classList.remove('hidden');
+
+});
 
 // CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
 
