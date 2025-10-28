@@ -2,7 +2,6 @@
 
 
 .design {
-  background-color: vars.$colorBg;
   font-family: vars.$fontMain;
 }
 
@@ -15,7 +14,7 @@
   display: flex;
   align-items: center;
   margin: 0rem 1rem;
-  border-bottom: solid black 1.5px;
+  border-bottom: solid 1.5px vars.$colorFramework;
 }
 
 .pallette {
@@ -24,6 +23,7 @@
 
 .title-desing {
   font-family: "Uncial Antiqua", system-ui;
+  color: vars.$colorFont;
 }
 
 /*-- ---- ---- ---- ---- ---- button ---- ---- ---- ---- ---- --*/
@@ -42,6 +42,7 @@
 .open-panel {
   font-family: "Eagle Lake", serif;
   margin: 1.5rem 1.5rem;
+  color: vars.$colorFramework;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;

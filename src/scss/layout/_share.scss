@@ -2,7 +2,7 @@
 
 .share {
   display: flex;
-  border-bottom: solid 0.1rem black;
+  border-bottom: solid 0.1rem vars.$colorFramework;
   height: 1.5rem;
   margin-inline: 1rem;
   padding-bottom: 2rem;
@@ -12,6 +12,7 @@
 .share_h3 {
   font-family: vars.$fontTitle;
   font-size: 1.17em;
+  color: vars.$colorFont;
   width: 2em;
   height: 2em;
 }
@@ -33,7 +34,7 @@
 .share_button_create {
   display: flex;
   justify-content: center;
-  border-bottom: solid 0.1em black;
+  border-bottom: solid 0.1em vars.$colorFramework;
   padding: 0.5em;
   margin-inline: 1rem;
   margin-bottom: 1em;
@@ -41,6 +42,7 @@
 
 .share_button {
   font-family: vars.$fontMain;
+  color: vars.$colorFont;
 }
 
 .share_card {
@@ -52,6 +54,7 @@
 .share_card_h3 {
   font-family: vars.$fontTitle;
   font-size: 1em;
+  color: vars.$colorFont;
   margin-bottom: 1em;
 }
 
@@ -65,6 +68,7 @@
 
 .share_nav button {
   font-family: vars.$fontMain;
+  color: vars.$colorFont;
 }
 
 @media (min-width: 768px) {}
