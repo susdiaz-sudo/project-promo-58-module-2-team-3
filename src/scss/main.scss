@@ -13,3 +13,39 @@
 /*.collapsed .arrow {
     rotate: 180deg;
 }*/
+
+.design_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .design_section {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 55rem;
+    border: solid #4B1F05 0.5px; 
+    border-radius: 20px;
+    box-shadow: 0px 3px 8px #4B1F05;;
+    padding: 1rem;
+    margin: 1rem;
+    justify-self: center;
+  }
+
+  .preview-section {
+    min-height: fit-content;
+  }
+
+  .design_div {
+    flex: 2; /* más ancho */
+  }
+
+  .preview_div {
+    flex: 1; /* más estrecho */
+  }
+
+
+} 
