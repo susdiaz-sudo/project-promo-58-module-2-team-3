@@ -28,6 +28,15 @@ const arrow_design = document.querySelector(".arrow_design");
 const arrow_fill = document.querySelector('.arrow_fill');
 const arrow_share = document.querySelector('.arrow_share');
 
+
+// DESING
+const previewCard = document.querySelector('.js_container_preview');
+
+const inputPapiro = document.querySelector('.js_inputPapiro');
+const inputPiedra = document.querySelector('.js_inputPiedra');
+const inputMadera = document.querySelector('.js_inputMadera');
+
+
 // QUERY FILL
 const inputName = document.querySelector(".js_input_name");
 const inputRace = document.querySelector(".js_input_race");
@@ -50,6 +59,26 @@ const containerPreview = document.querySelector("js_container_preview");
 const previewUrl = document.querySelector("js_preview_url");
 
 // FUNCIONES
+
+/* ----    desing    ---- */
+inputPapiro.addEventListener("change", () => {
+  previewCard.classList.remove("bg-piedra");
+  previewCard.classList.remove("bg-madera");
+  previewCard.classList.add("bg-papiro");
+});
+
+inputPiedra.addEventListener("change", () => {
+  previewCard.classList.remove("bg-papiro");
+  previewCard.classList.remove("bg-madera");
+  previewCard.classList.add("bg-piedra");
+});
+
+inputMadera.addEventListener("change", () => {
+  previewCard.classList.remove("bg-papiro");
+  previewCard.classList.remove("bg-piedra");
+  previewCard.classList.add("bg-madera");
+});
+
 
 inputName.addEventListener("input", (ev) => {
   const name = inputName.value;
