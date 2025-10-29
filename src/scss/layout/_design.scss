@@ -26,8 +26,16 @@
   color: vars.$colorFont;
 }
 
-.arrow {
-  width: 2rem;
+.arrow_design {
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+  margin-top: -0.1em;
+  rotate: 90deg;
+}
+
+.rotate_arrow {
+  rotate: 0deg;
 }
 
 /*-- ---- ---- ---- ----  FIN  panel desing & arrow ---- ---- ---- ---- --*/

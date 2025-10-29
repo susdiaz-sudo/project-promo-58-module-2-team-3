@@ -23,13 +23,17 @@
   margin-top: -0.5em;
 }
 
-.share_arrow {
+.arrow_share {
   width: 2em;
   height: 2em;
-  margin-left: 4em;
-  margin-top: -0.6em;
+  margin-left: 5em;
+  margin-top: -0.1em;
+  rotate: 90deg;
 }
 
+.rotate_arrow {
+  rotate: 0deg;
+}
 
 .share_button_create {
   display: flex;

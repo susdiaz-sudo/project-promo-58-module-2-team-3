@@ -24,6 +24,10 @@ const fillSection = document.querySelector(".js_fillSection");
 const titleShare = document.querySelector(".js_titleShare");
 const shareSection = document.querySelector(".js_shareSection");
 
+const arrow_design = document.querySelector(".arrow_design");
+const arrow_fill = document.querySelector('.arrow_fill');
+const arrow_share = document.querySelector('.arrow_share');
+
 // QUERY FILL
 const inputName = document.querySelector(".js_input_name");
 const inputRace = document.querySelector(".js_input_race");
@@ -81,18 +85,27 @@ titleDesign.addEventListener("click", (ev) => {
   fillSection.classList.add("hidden");
   shareSection.classList.add("hidden");
   designSection.classList.remove("hidden");
+  arrow_design.classList.add("rotate_arrow");
+  arrow_fill.classList.remove("rotate_arrow");
+  arrow_share.classList.remove("rotate_arrow");
 });
 titleFill.addEventListener("click", (ev) => {
   //fillSection.classList.toggle('hidden');
   designSection.classList.add("hidden");
   shareSection.classList.add("hidden");
   fillSection.classList.remove("hidden");
+  arrow_fill.classList.add("rotate_arrow");
+  arrow_design.classList.remove("rotate_arrow");
+  arrow_share.classList.remove("rotate_arrow");
 });
 titleShare.addEventListener("click", (ev) => {
   //shareSection.classList.toggle('hidden');
   designSection.classList.add("hidden");
   fillSection.classList.add("hidden");
   shareSection.classList.remove("hidden");
+  arrow_share.classList.add("rotate_arrow");
+  arrow_design.classList.remove("rotate_arrow");
+  arrow_fill.classList.remove("rotate_arrow");
 });
 
 // CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
