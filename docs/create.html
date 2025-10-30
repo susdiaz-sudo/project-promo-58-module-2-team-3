@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ada Roll</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="icon" href="#" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/main-DxRUNsuq.js"></script>
+  <script type="module" crossorigin src="./js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CoFTVwMx.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+
+<div class="header_create">
+    <a href="index.html">
+        <img src="./assets/Logo-grey-color-CgU3FFhR.png" alt="logo ada roll" class="logo_header">
+    </a>
+</div>   
+
+</header>
+
+    <main class="main_container">
+      <section class="design_section">
+        <div class="preview_div">
+          <section class="preview-section hidden">
+  <div class="card-container js_container_preview">
+    <button class="reset-btn js_reset_btn">Reset</button>
+
+    <div class="character-card">
+      <div class="character-photo js_image_preview"></div>
+      <h2 class="character-name js_name_preview">Nombre del personaje</h2>
+
+      <div class="character-details">
+        <div class="column">
+          <p>
+            <strong>Raza:</strong> <p class="raza js_race_preview"></p>
+          </p>
+          <p>
+            <strong>Género:</strong>
+            <p class="género js_gender_preview"></p>
+          </p>
+          <p>
+            <strong>Clase:</strong>
+            <p class="clase js_class_preview"></p>
+          </p>
+        </div>
+        <div class="column">
+          <p>
+            <strong>Edad:</strong> <p class="edad js_age_preview"></p>
+          </p>
+          <p>
+            <strong>Afiliación:</strong>
+            <p class="afiliación js_affiliation_preview"></p>
+          </p>
+          <!-- <p><strong>Arma:</strong> <p class="arma">-</p></p> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="share-url">
+      <p>Tu tarjeta está disponible en:</p>
+      <a href="#" class="preview-url js_preview_url">https://</a>
+    </div>
+  </div>
+</section>
+
+        </div>
+        <div class="design_div">
+          <link rel="stylesheet" href="../scss/core/_variables.scss">
+
+
+<section class="design js_titleDesign collapsed">
+  <!-- ---- ---- ---- panel desing & arrow ---- ---- ---- -->
+  <div class="panel-design">
+    <img class="pallette" src="../images/icons/pallette.png">
+    <h3 class="title-desing">Diseña</h3>
+    <img class="arrow_design" src="../images/icons/arrow.png" alt="Abrir y cerrar panel">
+  </div>
+  <!-- ---- ---- ---- FIN   panel desing & arrow ---- ---- ---- -->
+  <section class="hidden js_designSection">
+    <div class="open-panel">
+      <p>Fondos:</p>
+      <!-- ---- ---- ---- ---- ---- ---- -->
+      <label class="background-option">
+        <div class="element">
+          <input class="inputPapiro js_inputPapiro" type="radio" name="background" value="papiro">
+          <img class="background-images" src="../images/background/miniature/papiro-miniature.png" alt="Fondo Papiro">
+        </div>
+        <!-- ---- ---- ---- ---- ---- ---- -->
+      </label>
+      <label class="background-option">
+        <div class="element">
+          <input class="inputPiedra js_inputPiedra" type="radio" name="background" value="piedra">
+          <img class="background-images" src="../images/background/miniature/piedra-miniature.png" alt="Fondo Piedra">
+        </div>
+        <!-- ---- ---- ---- ---- ---- ---- -->
+      </label>
+      <label class="background-option">
+        <div class="element">
+          <input class="inputMadera js_inputMadera" type="radio" name="background" value="madera">
+          <img class="background-images" src="../images/background/miniature/madera-miniature.png" alt="Fondo Madera">
+          <!-- ---- ---- ---- ---- ---- ---- -->
+        </div>
+      </label>
+    </div>
+  </section>
+</section>
+          <div class="fill_form_title js_titleFill">
+  <img src="../images/icons/feather.png" alt="pluma" class="feather" />
+  <h3 class="fill">Rellena</h3>
+  <img src="../images/icons/arrow.png" alt="flecha" class="arrow_fill" />
+</div>
+
+<section class="hidden js_fillSection">
+  <form class="fill_form">
+    <div class="form-section">
+      <div class="content">
+        <label for="name"
+          >Nombre:
+          <input
+            class="input_name js_input_name"
+            placeholder="Ej: Silvara Thorngrove"
+            type="text"
+            name="name"
+        /></label>
+      </div>
+
+      <div class="content">
+        <label for="race"
+          >Raza:
+          <select class="input_race js_input_race" id="race" name="race">
+            <option>Alto Elfo</option>
+            <option>Elfo Oscuro</option>
+            <option>Githyanki</option>
+            <option>Humano</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="content">
+        <label for="gender">Género: </label>
+        <select class="input_gender js_input_gender" id="race" name="race">
+          <option>Mujer</option>
+          <option>Hombre</option>
+          <option>No binarie</option>
+        </select>
+      </div>
+
+      <div class="content">
+        <label for="image"
+          >Imagen:
+          <input type="file" class="input_image js_input_image" />
+          <img
+            class="square_preview"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vJ1EhmCqCEBzNaDu2OJ8TPVSvDgFkEjJvaIY5lBK2ZeD2I8smsO0RWFR1ZWoSWJjTOQ&usqp=CAU"
+            alt="cuadrado preview"
+          />
+        </label>
+      </div>
+
+      <div class="content">
+        <label for="class">Clase: </label>
+        <select class="input_class js_input_class" id="class" name="class">
+          <option>Guerrero</option>
+          <option>Arquero</option>
+          <option>Mago</option>
+          <option>Clérigo</option>
+        </select>
+      </div>
+
+      <div class="content">
+        <label for="age"
+          >Edad:
+          <input
+            class="input_age js_input_age"
+            placeholder="Ej: 450"
+            type="number"
+            name="age"
+        /></label>
+      </div>
+
+      <div class="content">
+        <label for="affiliation">Affiliación: </label>
+        <select
+          class="input_affiliation js_input_affiliation"
+          id="affiliation"
+          name="affiliation"
+        >
+          <option>Hijos de la Luz</option>
+          <option>Siervos de la Oscuridad</option>
+          <option>Gentes del Cristal</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</section>
+
+          <div class="share js_titleShare">
+  <img class="share_img" src="../images/icons/papiro.png" alt="share_img">
+  <h3 class="share_h3">Comparte</h3>
+  <img class="arrow_share" src="../images/icons/arrow.png" alt="share_arrow">
+</div>
+<section class="share_section hidden js_shareSection">
+  <div class="share_button_create">
+    <button class="share_button">Crear Tarjeta</button>
+  </div>
+  <div class="share_card">
+    <h3 class="share_card_h3">La tarjeta ha sido creada</h3>
+  </div>
+  <nav class="share_nav">
+    <button>Compartir en Instagram</button>
+    <button>Compartir en Twitter</button>
+    <button>Compartir en Facebook</button>
+    <button>Compartir en Whatsapp</button>
+    <button>Compartir en Email</button>
+  </nav>
+</section>
+        </div>
+
+      </section>
+    </main>
+    
+
+<footer class="footer">
+  
+    <div class="copy">
+    Ada Roll &copy; 2025
+    </div>
+    <div class="contenedor_logo_adalab">
+    <a href="https://adalab.es">
+      <img src="../images/logo-adalab.png" alt="logo adalab" class="logo_adalab">
+    </a>
+    </div>
+  
+</footer>
+  </div>
+</body>
+
+</html>
