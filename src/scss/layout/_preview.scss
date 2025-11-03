@@ -1,4 +1,4 @@
-@use '../core/variables' as vars;
+@use "../core/variables" as vars;
 
 .preview-section {
   display: flex;
@@ -25,10 +25,16 @@
 
 .bg-piedra {
   background-image: url("../Fondos/piedra.png");
+  * {
+    color: white !important;
+  }
 }
 
 .bg-madera {
   background-image: url("../Fondos/madera.png");
+   * {
+    color: white !important;
+  }
 }
 
 .reset-btn {
