@@ -5,11 +5,6 @@
   to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes rebote {
-  0%, 50% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
 .html_index {
   min-height: 100%;
 }
