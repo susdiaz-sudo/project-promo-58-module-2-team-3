@@ -25,17 +25,15 @@ const titleShare = document.querySelector(".js_titleShare");
 const shareSection = document.querySelector(".js_shareSection");
 
 const arrow_design = document.querySelector(".arrow_design");
-const arrow_fill = document.querySelector('.arrow_fill');
-const arrow_share = document.querySelector('.arrow_share');
-
+const arrow_fill = document.querySelector(".arrow_fill");
+const arrow_share = document.querySelector(".arrow_share");
 
 // DESING
-const previewCard = document.querySelector('.js_container_preview');
+const previewCard = document.querySelector(".js_container_preview");
 
-const inputPapiro = document.querySelector('.js_inputPapiro');
-const inputPiedra = document.querySelector('.js_inputPiedra');
-const inputMadera = document.querySelector('.js_inputMadera');
-
+const inputPapiro = document.querySelector(".js_inputPapiro");
+const inputPiedra = document.querySelector(".js_inputPiedra");
+const inputMadera = document.querySelector(".js_inputMadera");
 
 // QUERY FILL
 const inputName = document.querySelector(".js_input_name");
@@ -54,11 +52,19 @@ const genderPreview = document.querySelector(".js_gender_preview");
 const classPreview = document.querySelector(".js_class_preview");
 const agePreview = document.querySelector(".js_age_preview");
 const affiliationPreview = document.querySelector(".js_affiliation_preview");
-const resetBtn = document.querySelector("js_reset_btn");
-const containerPreview = document.querySelector("js_container_preview");
-const previewUrl = document.querySelector("js_preview_url");
+const resetBtn = document.querySelector(".js_reset_btn");
+const containerPreview = document.querySelector(".js_container_preview");
+const previewUrl = document.querySelector(".js_preview_url");
 
 // FUNCIONES
+function resetDesignForm() {
+  const radioButtons = document.querySelectorAll(
+    'input[type="radio"][name="background"]'
+  );
+  radioButtons.forEach((radio) => {
+    radio.checked = false;
+  });
+}
 
 /* ----    desing    ---- */
 inputPapiro.addEventListener("change", () => {
@@ -78,7 +84,6 @@ inputMadera.addEventListener("change", () => {
   previewCard.classList.remove("bg-piedra");
   previewCard.classList.add("bg-madera");
 });
-
 
 inputName.addEventListener("input", (ev) => {
   const name = inputName.value;
@@ -135,6 +140,27 @@ titleShare.addEventListener("click", (ev) => {
   arrow_share.classList.add("rotate_arrow");
   arrow_design.classList.remove("rotate_arrow");
   arrow_fill.classList.remove("rotate_arrow");
+});
+
+resetBtn.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  inputName.value = "";
+  inputAge.value = "";
+  inputRace.value = "";
+  inputGender.value = "";
+  inputClass.value = "";
+  inputAffiliation.value = "";
+  inputPiedra.value = "";
+  inputMadera.value = "";
+  inputPapiro.value = "";
+  previewCard.classList.remove("bg-piedra", "bg-madera", "bg-papiro");
+  namePreview.innerHTML = "Nombre del personaje";
+  agePreview.innerHTML = "";
+  racePreview.innerHTML = "";
+  genderPreview.innerHTML = "";
+  classPreview.innerHTML = "";
+  affiliationPreview.innerHTML = "";
+  resetDesignForm();
 });
 
 // CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
