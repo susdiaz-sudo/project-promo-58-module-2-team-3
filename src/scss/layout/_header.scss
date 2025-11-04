@@ -1,4 +1,8 @@
 
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
 
 .page__header {
   display: flex;
@@ -15,4 +19,5 @@
 
 .logo_header {
   max-height: 5dvh;
+  animation: flotar 2s ease-in-out infinite;
 }
