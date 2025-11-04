@@ -2,6 +2,8 @@
 
 console.log(">> Ready :)");
 
+import './partials/get-avatar'
+
 //-Cosas:
 //--Cambiar la tarjeta cuando la usuaria escribe en los <input>
 //--Cambiar la tarjeta cuando la usuaria hace click en una paleta

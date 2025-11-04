@@ -63,6 +63,17 @@
   color: vars.$colorFont;
 }
 
+.input_photo {
+  display: ruby-text;
+  margin-top: 1em;
+  padding: 0.5rem;
+  border: solid 0.5px vars.$colorFramework;
+  box-shadow: 0px 3px 8px vars.$colorFramework;
+  border-radius: 20px;
+  border-style: dashed;
+  
+}
+
 .input_name,
 .input_race,
 .input_gender,
@@ -73,6 +84,14 @@
   color: rgb(127, 126, 126);
 }
 
-.square_preview {
-  width: 6rem;
+
+.photo_thumbnail {
+  width: 70px;
+  height: 70px;
+  border: solid vars.$colorFramework;
+  display: block;
+  overflow: hidden;
+  background-size: cover;       /* que llene el cuadrado */
+  background-position: center;  /* que se centre */
+  background-repeat: no-repeat;
 }

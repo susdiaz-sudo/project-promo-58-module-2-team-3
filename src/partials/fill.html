@@ -42,15 +42,10 @@
       </div>
 
       <div class="content">
-        <label for="image"
-          >Imagen:
-          <input type="file" class="input_image js_input_image" accept="image/*"/>
-          <img
-            class="square_preview"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vJ1EhmCqCEBzNaDu2OJ8TPVSvDgFkEjJvaIY5lBK2ZeD2I8smsO0RWFR1ZWoSWJjTOQ&usqp=CAU"
-            alt="cuadrado preview"
-          />
-        </label>
+        <label for="photo">Imagen:</label>
+        <label for="photo" class="input_photo">Añadir imagen</label>
+          <input class="hidden js__profile-upload-btn" id="photo" type="file" />
+          <span class="photo_thumbnail js__profile-preview"></span>
       </div>
 
       <div class="content">
