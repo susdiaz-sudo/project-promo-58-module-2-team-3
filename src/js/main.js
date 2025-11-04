@@ -56,6 +56,13 @@ const resetBtn = document.querySelector(".js_reset_btn");
 const containerPreview = document.querySelector(".js_container_preview");
 const previewUrl = document.querySelector(".js_preview_url");
 
+// QUERY SHARE
+const cardCreateButton = document.querySelector(".js_card_create_button");
+const shareLink = document.querySelector(".js_shareLink");
+const shareSuccessBox = document.querySelector(".js_shareSuccessBox");
+const shareFailBox = document.querySelector(".js_shareFailBox");
+const shareNav = document.querySelector(".js_shareNav");
+
 // FUNCIONES
 function resetDesignForm() {
   const radioButtons = document.querySelectorAll(
@@ -140,6 +147,42 @@ titleShare.addEventListener("click", (ev) => {
   arrow_share.classList.add("rotate_arrow");
   arrow_design.classList.remove("rotate_arrow");
   arrow_fill.classList.remove("rotate_arrow");
+});
+
+cardCreateButton.addEventListener("click", (ev) => {
+  ev.preventDefault();
+
+  const cardToSend = {
+    field1: 1,
+    field2: "diseño",
+    field3: inputName.value,
+    field4: inputRace.value,
+    field5: inputGender.value,
+    field6: inputClass.value,
+    field7: inputAge.value,
+    field8: inputAffiliation.value,
+    photo: inputImage,
+  };
+
+  fetch("https://dev.adalab.es/api/info/data", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(cardToSend),
+  })
+    .then((res) => res.json)
+    .then((dataResponse) => {
+      console.log(dataResponse);
+      if (dataResponse.success === true) {
+        shareSuccessBox.classList.remove("hidden");
+        shareNav.classList.remove("hidden");
+        shareLink.innerHTML = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
+        shareLink.href = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
+      } else {
+        shareFailBox.classList.remove("hidden");
+      }
+    });
 });
 
 resetBtn.addEventListener("click", (ev) => {

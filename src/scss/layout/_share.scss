@@ -44,13 +44,19 @@
   margin-bottom: 1em;
 }
 
-.share_button {
+.cardCreateButton {
   font-family: vars.$fontMain;
   color: vars.$colorFont;
+  background-color: white;
+  border-color: white;
+  padding: 0.2em 0.2em;
+  cursor: pointer;
 }
 
 .share_card {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   white-space: nowrap;
 }
@@ -59,20 +65,35 @@
   font-family: vars.$fontTitle;
   font-size: 1em;
   color: vars.$colorFont;
+  margin-bottom: 0.5em;
+}
+
+.shareFailBox {
+  font-family: vars.$fontMain;
+  font-size: 0.8em;
+  color: vars.$colorFont;
   margin-bottom: 1em;
+  text-wrap:initial;
+  text-align: center;
 }
 
 .share_nav {
+  gap: 1em;
+}
+
+.share_nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  margin-bottom: 2em;
-}
-
-.share_nav button {
   font-family: vars.$fontMain;
+  font-size: 0.8em;
   color: vars.$colorFont;
+  background-color: white;
+  border-color: white;
+  box-shadow: 0.15em 0.15em 0 0 rgb(175, 175, 175);
+  margin-block: 1em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {}
