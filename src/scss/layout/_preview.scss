@@ -1,11 +1,15 @@
 @use "../core/variables" as vars;
 
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 .preview-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  min-height: 100vh;
   font-family: vars.$fontMain;
 }
 
@@ -17,6 +21,7 @@
   padding: 2rem;
   width: 350px;
   text-align: center;
+  animation: aparecer 1s ease-out forwards;
 }
 
 .bg-papiro {
