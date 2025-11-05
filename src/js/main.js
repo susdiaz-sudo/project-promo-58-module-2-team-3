@@ -153,7 +153,7 @@ titleShare.addEventListener("click", (ev) => {
 
 cardCreateButton.addEventListener("click", (ev) => {
   ev.preventDefault();
-
+  shareFailBox.classList.add("hidden");
   let designValue = "";
 
   if (inputPapiro.checked) {
@@ -173,48 +173,42 @@ cardCreateButton.addEventListener("click", (ev) => {
     field6: inputClass.value,
     field7: inputAge.value,
     field8: inputAffiliation.value,
-    photo: inputImage.files[0]
+    photo: inputImage.files[0],
   };
 
-  console.log(cardToSend);
+  console.log(cardToSend); // eliminar
 
-if (checkFieldsToSend(cardToSend)) {
-  fetch("https://dev.adalab.es/api/info/data", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(cardToSend),
-  })
-    .then((res) => res.json)
-    .then((dataResponse) => {
-      console.log(dataResponse);
-      if (dataResponse.success === true) {
+  if (checkFieldsToSend(cardToSend)) {
+    fetch("https://dev.adalab.es/api/info/data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cardToSend),
+    })
+      .then((res) => res.json)
+      .then((dataResponse) => {
+        console.log(dataResponse); // eliminar
+        
         shareSuccessBox.classList.remove("hidden");
         shareNav.classList.remove("hidden");
         shareLink.innerHTML = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
         shareLink.href = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
-      } else {
-        shareFailBox.classList.remove("hidden");
-      }
-    });
+      });
   }
 });
 
-function checkFieldsToSend(cardToSend){
+function checkFieldsToSend(cardToSend) {
   let allFieldsCorrect = true;
 
-  for(const field in cardToSend) {
-    console.log(cardToSend[field]);
-    if(cardToSend[field] === null || cardToSend[field] === ""){
+  for (const field in cardToSend) {
+    console.log(cardToSend[field]); // eliminar
+    if (cardToSend[field] === null || cardToSend[field] === "") {
       shareFailBox.classList.remove("hidden");
-      allFieldsCorrect = false;    
+      return (allFieldsCorrect = false);
     }
-  };
-
-  return allFieldsCorrect;
+  }
 }
-
 
 resetBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
