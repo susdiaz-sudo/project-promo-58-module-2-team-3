@@ -1,8 +1,15 @@
 @use "../core/variables" as vars;
 
 @keyframes aparecer {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .preview-section {
@@ -14,10 +21,12 @@
 }
 
 .card-container {
+  background-image: url("../Fondos/Dados.png");
+  background-position: top;
   position: relative;
-  background-color: #fff;
+  border: solid #4B1F05 0.8px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.70);
   padding: 2rem;
   width: 350px;
   text-align: center;
@@ -30,6 +39,7 @@
 
 .bg-piedra {
   background-image: url("../Fondos/piedra.png");
+
   * {
     color: rgb(215, 210, 210) !important;
   }
@@ -37,7 +47,8 @@
 
 .bg-madera {
   background-image: url("../Fondos/madera.png");
-   * {
+
+  * {
     color: #f3e0c1 !important;
   }
 }
