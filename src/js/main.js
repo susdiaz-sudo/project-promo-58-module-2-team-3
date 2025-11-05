@@ -2,7 +2,7 @@
 
 console.log(">> Ready :)");
 
-import './partials/get-avatar'
+import "./partials/get-avatar";
 
 //-Cosas:
 //--Cambiar la tarjeta cuando la usuaria escribe en los <input>
@@ -156,9 +156,9 @@ cardCreateButton.addEventListener("click", (ev) => {
 
   const designValue = "";
 
-  if(inputPapiro.checked){
+  if (inputPapiro.checked) {
     designValue = inputPapiro.value;
-  } else if(inputPiedra.checked){
+  } else if (inputPiedra.checked) {
     designValue = inputPiedra.value;
   } else {
     designValue = inputMadera.value;
@@ -216,6 +216,7 @@ resetBtn.addEventListener("click", (ev) => {
   classPreview.innerHTML = "";
   affiliationPreview.innerHTML = "";
   resetDesignForm();
+  imagePreview.style.backgroundImage = "none";
 });
 
 // CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
