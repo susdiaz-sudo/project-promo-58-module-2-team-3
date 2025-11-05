@@ -57,6 +57,7 @@ const affiliationPreview = document.querySelector(".js_affiliation_preview");
 const resetBtn = document.querySelector(".js_reset_btn");
 const containerPreview = document.querySelector(".js_container_preview");
 const previewUrl = document.querySelector(".js_preview_url");
+const profilePreview = document.querySelector(".js__profile-preview");
 
 // QUERY SHARE
 const cardCreateButton = document.querySelector(".js_card_create_button");
@@ -189,7 +190,7 @@ cardCreateButton.addEventListener("click", (ev) => {
       .then((res) => res.json)
       .then((dataResponse) => {
         console.log(dataResponse); // eliminar
-        
+
         shareSuccessBox.classList.remove("hidden");
         shareNav.classList.remove("hidden");
         shareLink.innerHTML = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
@@ -229,7 +230,8 @@ resetBtn.addEventListener("click", (ev) => {
   classPreview.innerHTML = "";
   affiliationPreview.innerHTML = "";
   resetDesignForm();
-  imagePreview.style.backgroundImage = "none";
+  imagePreview.style.backgroundImage = "url(../../images/dark-elf.png)";
+  profilePreview.style.backgroundImage = "none";
 });
 
 // CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
