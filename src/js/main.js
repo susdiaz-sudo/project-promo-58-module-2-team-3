@@ -231,6 +231,7 @@ resetBtn.addEventListener("click", (ev) => {
   affiliationPreview.innerHTML = "";
   resetDesignForm();
   imagePreview.style.backgroundImage = "url(../../images/dark-elf.png)";
+  inputImage.value = "";
   profilePreview.style.backgroundImage = "none";
 });
 
