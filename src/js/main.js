@@ -178,6 +178,7 @@ cardCreateButton.addEventListener("click", (ev) => {
 
   console.log(cardToSend);
 
+if (checkFieldsToSend(cardToSend)) {
   fetch("https://dev.adalab.es/api/info/data", {
     method: "POST",
     headers: {
@@ -197,7 +198,23 @@ cardCreateButton.addEventListener("click", (ev) => {
         shareFailBox.classList.remove("hidden");
       }
     });
+  }
 });
+
+function checkFieldsToSend(cardToSend){
+  let allFieldsCorrect = true;
+
+  for(const field in cardToSend) {
+    console.log(cardToSend[field]);
+    if(cardToSend[field] === null || cardToSend[field] === ""){
+      shareFailBox.classList.remove("hidden");
+      allFieldsCorrect = false;    
+    }
+  };
+
+  return allFieldsCorrect;
+}
+
 
 resetBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
