@@ -13,9 +13,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/main-DxRUNsuq.js"></script>
+  <script type="module" crossorigin src="./assets/main-DF30JJ2m.js"></script>
   <script type="module" crossorigin src="./js/main.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CoFTVwMx.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-VB8ZFIl2.css">
 </head>
 
 <body>
@@ -35,10 +35,10 @@
         <div class="preview_div">
           <section class="preview-section hidden">
   <div class="card-container js_container_preview">
-    <button class="reset-btn js_reset_btn">Reset</button>
+    <button class="reset-btn js_reset_btn">Borrar</button>
 
     <div class="character-card">
-      <div class="character-photo js_image_preview"></div>
+      <div class="character-photo js_image_preview js__profile-image"></div>
       <h2 class="character-name js_name_preview">Nombre del personaje</h2>
 
       <div class="character-details">
@@ -70,22 +70,25 @@
 
     <div class="share-url">
       <p>Tu tarjeta está disponible en:</p>
-      <a href="#" class="preview-url js_preview_url">https://</a>
+      <a class="js-shareLink" href="https://dev.adalab.es/api/info/data" class="preview-url js_preview_url js_shareLink">https://</a>
     </div>
   </div>
 </section>
 
         </div>
         <div class="design_div">
-          <link rel="stylesheet" href="../scss/core/_variables.scss">
-
+          <link rel="stylesheet" href="../scss/core/_variables.scss" />
 
 <section class="design js_titleDesign collapsed">
   <!-- ---- ---- ---- panel desing & arrow ---- ---- ---- -->
   <div class="panel-design">
-    <img class="pallette" src="../images/icons/pallette.png">
+    <img class="pallette" src="../images/icons/pallette.png" />
     <h3 class="title-desing">Diseña</h3>
-    <img class="arrow_design" src="../images/icons/arrow.png" alt="Abrir y cerrar panel">
+    <img
+      class="arrow_design"
+      src="../images/icons/arrow.png"
+      alt="Abrir y cerrar panel"
+    />
   </div>
   <!-- ---- ---- ---- FIN   panel desing & arrow ---- ---- ---- -->
   <section class="hidden js_designSection">
@@ -94,28 +97,56 @@
       <!-- ---- ---- ---- ---- ---- ---- -->
       <label class="background-option">
         <div class="element">
-          <input class="inputPapiro js_inputPapiro" type="radio" name="background" value="papiro">
-          <img class="background-images" src="../images/background/miniature/papiro-miniature.png" alt="Fondo Papiro">
+          <input
+            class="inputPapiro js_inputPapiro"
+            type="radio"
+            name="background"
+            value="papiro"
+          />
+          <img
+            class="background-images"
+            src="../images/background/miniature/papiro-miniature.png"
+            alt="Fondo Papiro"
+          />
         </div>
         <!-- ---- ---- ---- ---- ---- ---- -->
       </label>
       <label class="background-option">
         <div class="element">
-          <input class="inputPiedra js_inputPiedra" type="radio" name="background" value="piedra">
-          <img class="background-images" src="../images/background/miniature/piedra-miniature.png" alt="Fondo Piedra">
+          <input
+            class="inputPiedra js_inputPiedra"
+            type="radio"
+            name="background"
+            value="piedra"
+          />
+          <img
+            class="background-images"
+            src="../images/background/miniature/piedra-miniature.png"
+            alt="Fondo Piedra"
+          />
         </div>
         <!-- ---- ---- ---- ---- ---- ---- -->
       </label>
       <label class="background-option">
         <div class="element">
-          <input class="inputMadera js_inputMadera" type="radio" name="background" value="madera">
-          <img class="background-images" src="../images/background/miniature/madera-miniature.png" alt="Fondo Madera">
+          <input
+            class="inputMadera js_inputMadera"
+            type="radio"
+            name="background"
+            value="madera"
+          />
+          <img
+            class="background-images"
+            src="../images/background/miniature/madera-miniature.png"
+            alt="Fondo Madera"
+          />
           <!-- ---- ---- ---- ---- ---- ---- -->
         </div>
       </label>
     </div>
   </section>
 </section>
+
           <div class="fill_form_title js_titleFill">
   <img src="../images/icons/feather.png" alt="pluma" class="feather" />
   <h3 class="fill">Rellena</h3>
@@ -140,6 +171,7 @@
         <label for="race"
           >Raza:
           <select class="input_race js_input_race" id="race" name="race">
+            <option value="" selected disabled>Selecciona tu raza</option>
             <option>Alto Elfo</option>
             <option>Elfo Oscuro</option>
             <option>Githyanki</option>
@@ -151,6 +183,7 @@
       <div class="content">
         <label for="gender">Género: </label>
         <select class="input_gender js_input_gender" id="race" name="race">
+          <option value="" selected disabled>Selecciona tu género</option>
           <option>Mujer</option>
           <option>Hombre</option>
           <option>No binarie</option>
@@ -158,20 +191,16 @@
       </div>
 
       <div class="content">
-        <label for="image"
-          >Imagen:
-          <input type="file" class="input_image js_input_image" />
-          <img
-            class="square_preview"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vJ1EhmCqCEBzNaDu2OJ8TPVSvDgFkEjJvaIY5lBK2ZeD2I8smsO0RWFR1ZWoSWJjTOQ&usqp=CAU"
-            alt="cuadrado preview"
-          />
-        </label>
+        <label for="photo">Imagen:</label>
+        <label for="photo" class="input_photo">Añadir imagen</label>
+          <input class="hidden js__profile-upload-btn" id="photo" type="file" />
+          <span class="photo_thumbnail js__profile-preview"></span>
       </div>
 
       <div class="content">
         <label for="class">Clase: </label>
         <select class="input_class js_input_class" id="class" name="class">
+          <option value="" selected disabled>Selecciona tu clase</option>
           <option>Guerrero</option>
           <option>Arquero</option>
           <option>Mago</option>
@@ -191,12 +220,13 @@
       </div>
 
       <div class="content">
-        <label for="affiliation">Affiliación: </label>
+        <label for="affiliation">Afiliación: </label>
         <select
           class="input_affiliation js_input_affiliation"
           id="affiliation"
           name="affiliation"
         >
+          <option value="" selected disabled>Selecciona tu Afiliación</option>
           <option>Hijos de la Luz</option>
           <option>Siervos de la Oscuridad</option>
           <option>Gentes del Cristal</option>
@@ -213,18 +243,23 @@
 </div>
 <section class="share_section hidden js_shareSection">
   <div class="share_button_create">
-    <button class="share_button">Crear Tarjeta</button>
+    <button class="cardCreateButton js_card_create_button">Crear Tarjeta</button>
   </div>
   <div class="share_card">
-    <h3 class="share_card_h3">La tarjeta ha sido creada</h3>
+    <h3 class="share_card_h3 js_shareSuccessBox hidden">La tarjeta ha sido creada</h3>
+    <span class="js_shareFailBox shareFailBox hidden">No se pudo crear la tarjeta. Por favor, rellene todos los campos.</span>
+    <a class="js_shareLink" href="#"></a>
   </div>
-  <nav class="share_nav">
-    <button>Compartir en Instagram</button>
-    <button>Compartir en Twitter</button>
-    <button>Compartir en Facebook</button>
-    <button>Compartir en Whatsapp</button>
-    <button>Compartir en Email</button>
+  <nav class="share_nav js_shareNav hidden">
+    <a href="https://dev.adalab.es/api/info/data" class="js-shareInInsLink">Compartir en Instagram</a>
+    <a href="https://dev.adalab.es/api/info/data" class="js-shareInTwiLink">Compartir en Twitter</a>
+    <a href="https://dev.adalab.es/api/info/data" class="js-shareInFacLink">Compartir en Facebook</a>
+    <a href="https://dev.adalab.es/api/info/data" class="js-shareInWhaLink">Compartir en Whatsapp</a>
+    <a href="https://dev.adalab.es/api/info/data" class="js-shareInEmaLink">Compartir en Email</a>
   </nav>
+
+  
+
 </section>
         </div>
 

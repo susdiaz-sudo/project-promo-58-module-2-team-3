@@ -154,7 +154,7 @@ titleShare.addEventListener("click", (ev) => {
 cardCreateButton.addEventListener("click", (ev) => {
   ev.preventDefault();
 
-  const designValue = "";
+  let designValue = "";
 
   if (inputPapiro.checked) {
     designValue = inputPapiro.value;
@@ -173,8 +173,10 @@ cardCreateButton.addEventListener("click", (ev) => {
     field6: inputClass.value,
     field7: inputAge.value,
     field8: inputAffiliation.value,
-    photo: inputImage,
+    photo: inputImage.files[0]
   };
+
+  console.log(cardToSend);
 
   fetch("https://dev.adalab.es/api/info/data", {
     method: "POST",
