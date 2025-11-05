@@ -154,9 +154,19 @@ titleShare.addEventListener("click", (ev) => {
 cardCreateButton.addEventListener("click", (ev) => {
   ev.preventDefault();
 
+  const designValue = "";
+
+  if(inputPapiro.checked){
+    designValue = inputPapiro.value;
+  } else if(inputPiedra.checked){
+    designValue = inputPiedra.value;
+  } else {
+    designValue = inputMadera.value;
+  }
+
   const cardToSend = {
     field1: 1,
-    field2: "diseño",
+    field2: designValue,
     field3: inputName.value,
     field4: inputRace.value,
     field5: inputGender.value,
