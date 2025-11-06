@@ -187,7 +187,7 @@ cardCreateButton.addEventListener("click", (ev) => {
       },
       body: JSON.stringify(cardToSend),
     })
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((dataResponse) => {
         console.log(dataResponse); // eliminar
 
@@ -208,7 +208,7 @@ function checkFieldsToSend(cardToSend) {
       shareFailBox.classList.remove("hidden");
       return (allFieldsCorrect = false);
     }
-  }
+  } return (true);
 }
 
 resetBtn.addEventListener("click", (ev) => {
