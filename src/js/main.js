@@ -233,6 +233,7 @@ resetBtn.addEventListener("click", (ev) => {
   imagePreview.style.backgroundImage = "url(../../images/dark-elf.png)";
   inputImage.value = "";
   profilePreview.style.backgroundImage = "none";
+  shareFailBox.classList.add("hidden");
 });
 
 // CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
