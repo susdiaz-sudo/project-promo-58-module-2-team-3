@@ -46,11 +46,16 @@
 
 .cardCreateButton {
   font-family: vars.$fontMain;
-  color: vars.$colorFont;
-  background-color: white;
-  border-color: white;
+  color: white;
+  background-color: rgb(114, 13, 34);
+  border-radius: 6px;
   padding: 0.2em 0.2em;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.cardCreateButton:hover {
+  background-color: #b3002d;
 }
 
 .share_card {
