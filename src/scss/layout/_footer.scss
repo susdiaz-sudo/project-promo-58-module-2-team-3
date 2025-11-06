@@ -1,14 +1,5 @@
 @use '../core/variables' as vars;
 
-.page__footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    padding: 1rem;
-    color: vars.$colorSecundary;
-}
-
 .footer {
   max-height: 100dvh;
   border-top: solid #4B1F05 1.5px;
