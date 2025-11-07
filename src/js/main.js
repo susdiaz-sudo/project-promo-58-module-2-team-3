@@ -152,65 +152,6 @@ titleShare.addEventListener("click", (ev) => {
   arrow_fill.classList.remove("rotate_arrow");
 });
 
-cardCreateButton.addEventListener("click", (ev) => {
-  ev.preventDefault();
-  shareFailBox.classList.add("hidden");
-  let designValue = "";
-
-  if (inputPapiro.checked) {
-    designValue = inputPapiro.value;
-  } else if (inputPiedra.checked) {
-    designValue = inputPiedra.value;
-  } else {
-    designValue = inputMadera.value;
-  }
-
-  const cardToSend = {
-    field1: 1,
-    field2: designValue,
-    field3: inputName.value,
-    field4: inputRace.value,
-    field5: inputGender.value,
-    field6: inputClass.value,
-    field7: inputAge.value,
-    field8: inputAffiliation.value,
-    photo: inputImage.files[0],
-  };
-
-  console.log(cardToSend); // eliminar
-
-  if (checkFieldsToSend(cardToSend)) {
-    fetch("https://dev.adalab.es/api/info/data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(cardToSend),
-    })
-      .then((res) => res.json())
-      .then((dataResponse) => {
-        console.log(dataResponse); // eliminar
-
-        shareSuccessBox.classList.remove("hidden");
-        shareNav.classList.remove("hidden");
-        shareLink.innerHTML = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
-        shareLink.href = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
-      });
-  }
-});
-
-function checkFieldsToSend(cardToSend) {
-  let allFieldsCorrect = true;
-
-  for (const field in cardToSend) {
-    console.log(cardToSend[field]); // eliminar
-    if (cardToSend[field] === null || cardToSend[field] === "") {
-      shareFailBox.classList.remove("hidden");
-      return (allFieldsCorrect = false);
-    }
-  } return (true);
-}
-
 resetBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
   inputName.value = "";
@@ -236,4 +177,60 @@ resetBtn.addEventListener("click", (ev) => {
   shareFailBox.classList.add("hidden");
 });
 
-// CÓDIGO QUE SE LANZA CUANDO CARGA LA PÁGINA
+cardCreateButton.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  shareFailBox.classList.add("hidden");
+  let designValue = "";
+
+  if (inputPapiro.checked) {
+    designValue = inputPapiro.value;
+  } else if (inputPiedra.checked) {
+    designValue = inputPiedra.value;
+  } else {
+    designValue = inputMadera.value;
+  }
+
+  const cardToSend = {
+    field1: 1,
+    field2: designValue,
+    field3: inputName.value,
+    field4: inputRace.value,
+    field5: inputGender.value,
+    field6: inputClass.value,
+    field7: inputAge.value,
+    field8: inputAffiliation.value,
+    photo: inputImage.files[0],
+  };
+
+
+  if (checkFieldsToSend(cardToSend)) {
+    fetch("https://dev.adalab.es/api/info/data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cardToSend),
+    })
+      .then((res) => res.json())
+      .then((dataResponse) => {
+
+        shareSuccessBox.classList.remove("hidden");
+        shareNav.classList.remove("hidden");
+        shareLink.innerHTML = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
+        shareLink.href = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
+      });
+  }
+});
+
+function checkFieldsToSend(cardToSend) {
+  let allFieldsCorrect = true;
+
+  for (const field in cardToSend) {
+    if (cardToSend[field] === null || cardToSend[field] === "") {
+      shareFailBox.classList.remove("hidden");
+      return (allFieldsCorrect = false);
+    }
+  } return (true);
+}
+
+
