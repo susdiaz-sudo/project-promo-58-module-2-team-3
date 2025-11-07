@@ -64,8 +64,6 @@ const cardCreateButton = document.querySelector(".js_card_create_button");
 const shareLink = document.querySelector(".js_shareLink");
 const shareSuccessBox = document.querySelector(".js_shareSuccessBox");
 const shareFailBox = document.querySelector(".js_shareFailBox");
-const shareNav = document.querySelector(".js_shareNav");
-
 // FUNCIONES
 function resetDesignForm() {
   const radioButtons = document.querySelectorAll(
@@ -202,7 +200,6 @@ cardCreateButton.addEventListener("click", (ev) => {
     photo: inputImage.files[0],
   };
 
-
   if (checkFieldsToSend(cardToSend)) {
     fetch("https://dev.adalab.es/api/info/data", {
       method: "POST",
@@ -213,9 +210,7 @@ cardCreateButton.addEventListener("click", (ev) => {
     })
       .then((res) => res.json())
       .then((dataResponse) => {
-
         shareSuccessBox.classList.remove("hidden");
-        shareNav.classList.remove("hidden");
         shareLink.innerHTML = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
         shareLink.href = `https://dev.adalab.es/api/info/${dataResponse.infoID}`;
       });
@@ -230,7 +225,6 @@ function checkFieldsToSend(cardToSend) {
       shareFailBox.classList.remove("hidden");
       return (allFieldsCorrect = false);
     }
-  } return (true);
+  }
+  return true;
 }
-
-

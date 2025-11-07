@@ -1,13 +1,27 @@
 @use '../core/variables' as vars;
 
 @keyframes aparecer {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes flotar {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .html_index {
@@ -89,7 +103,7 @@
   max-width: 2em;
   gap: 20px;
   margin-left: 1rem;
-  
+
   .begin {
     display: flex;
     justify-content: center;
@@ -112,8 +126,8 @@
 }
 
 .begin a {
-text-decoration: none;
-} 
+  text-decoration: none;
+}
 
 .begin a:visited,
 .begin a:hover {
@@ -132,8 +146,8 @@ text-decoration: none;
   }
 
   .ada-roll-logo {
-  max-width: 300px;
+    max-width: 300px;
 
-}
+  }
 
 }

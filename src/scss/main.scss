@@ -15,8 +15,15 @@
 }*/
 
 @keyframes aparecer {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .design_section {
@@ -32,9 +39,10 @@
     align-items: flex-start;
     gap: 2rem;
     width: 768px;
-    border: solid #4B1F05 0.5px; 
+    border: solid #4B1F05 0.5px;
     border-radius: 20px;
-    box-shadow: 0px 3px 8px #4B1F05;;
+    box-shadow: 0px 3px 8px #4B1F05;
+    ;
     padding: 1rem;
     margin: 1rem;
     justify-self: center;
@@ -46,14 +54,16 @@
   }
 
   .design_div {
-    flex: 2; /* más ancho */
+    flex: 2;
+    /* más ancho */
   }
 
   .preview_div {
-    flex: 1; /* más estrecho */
+    flex: 1;
+    /* más estrecho */
   }
 
   .open-panel {
-    width:100px ;
+    width: 100px;
   }
-} 
+}

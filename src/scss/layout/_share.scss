@@ -78,27 +78,8 @@
   font-size: 0.8em;
   color: vars.$colorFont;
   margin-bottom: 1em;
-  text-wrap:initial;
+  text-wrap: initial;
   text-align: center;
-}
-
-.share_nav {
-  gap: 1em;
-}
-
-.share_nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: vars.$fontMain;
-  font-size: 0.8em;
-  color: vars.$colorFont;
-  background-color: white;
-  border-color: white;
-  box-shadow: 0.15em 0.15em 0 0 rgb(175, 175, 175);
-  margin-block: 1em;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {}
